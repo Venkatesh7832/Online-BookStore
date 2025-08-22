@@ -1,0 +1,36 @@
+
+body {
+      font-family: Arial, sans-serif;
+      padding: 30px;
+      background-image: url("images/Book_back.avif");
+    }
+    h2 {
+      text-align: center;
+      color: #2c3e50;
+    }
+    .book {
+      display: flex;
+      align-items: center;
+      background-color: burlywood;
+      padding: 15px;
+      margin-bottom: 20px;
+      border-left: 5px solid teal;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      border-radius: 6px;
+      max-width: 600px;
+      margin: 20px auto;
+    }
+    .book img {
+      width: 100px;
+      height: 150px;
+      margin-right: 20px;
+      border-radius: 4px;
+    }
+    .book-details {
+      font-size: 16px;
+      color: #333;
+    }
+    .book-details strong {
+      font-size: 18px;
+      color: #000;
+    }

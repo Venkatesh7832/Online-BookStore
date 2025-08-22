@@ -1,0 +1,18 @@
+body {
+      background-image: url("images/BackGround3.jpeg");
+      padding: 40px;
+      line-height: 1.6;
+      color: rgb(61, 14, 228);
+  
+    }
+    
+    h2 {
+      color: blanchedalmond;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      text-align: justify;
+    }

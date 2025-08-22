@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Book Haven - Add to Cart</title>
+  <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+  <script>
+    let Items = [];
+
+    function addToCart(title, price) {
+      Items.push({ title, price });
+      update();
+    }
+
+    function update() {
+      const cartList = document.getElementById('items');
+      const total = document.getElementById('totalamount');
+      let totalamount = 0;
+      cartList.innerHTML = '';
+
+      Items.forEach(item => {
+        const listItem = document.createElement('li');
+        listItem.textContent = `${item.title} - ₹${item.price}`;
+        cartList.appendChild(listItem);
+        totalamount += item.price;
+      });
+
+      total.textContent = `Total Amount: ₹${totalamount}`;
+    }
+
+    function submitCart() {
+      alert('Cart submitted successfully!');
+    }
+  </script>
+
+  <header>
+    📚 Welcome to Book Haven - Shop Books
+  </header>
+
+  <table>
+    <tr align="center">
+      <th>Image</th>
+      <th>Title</th>
+      <th>Price</th>
+      <th>Add to Cart</th>
+    </tr>
+    <tr align="center">
+      <td><img src="images/Atomic_Habits.jpg" width="100" alt="Book1"></td>
+      <td>Atomic_Habits</td>
+      <td>₹599</td>
+      <td><button onclick="addToCart('Atomic Habits', 599)">Click Here</button></td>
+    </tr>
+    
+    
+    <tr align="center">
+      <td><img src="images/Alchemist.jpeg" width="100" alt="Book4"></td>
+      <td>The Alchemist/td>
+      <td>₹389</td>
+      <td><button onclick="addToCart('The Alchemist', 389)">Click Here</button></td>
+    </tr>
+    <tr align="center">
+      <td><img src="images/Rich_Dad.jpeg" width="100" alt="Book5"></td>
+      <td>Rich_Dad Poor Dad</td>
+      <td>₹329</td>
+      <td><button onclick="addToCart('Rich Dad poor dad', 329)">Click Here</button></td>
+    </tr>
+    <tr align="center">
+      <td><img src="images/Ikigai.jpeg" width="100" alt="Book6"></td>
+      <td>Ikigai</td>
+      <td>₹489</td>
+      <td><button onclick="addToCart('Ikigai', 489)">Click Here</button></td>
+    </tr>
+  </table>
+
+  <div id="cart">
+    <h2>Your Cart</h2>
+    <ul id="items"></ul>
+    <p id="totalamount">Total Amount: ₹0</p>
+    <button onclick="submitCart()">Submit</button>
+  </div>
+
+</body>
+</html>
+
+<!-- 
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Menu</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+
+    <script>
+        let Items = [];
+        
+        function addToCart(title, price) {
+          Items.push({ title, price });
+          update();
+        }
+        function update() {
+          const cartTable = document.getElementById('items');
+          const total = document.getElementById('totalamount');
+          let totalamount = 0;
+          cartTable.innerHTML = '<tr><th>Title</th><th>Price</th></tr>';
+    
+          Items.forEach(item => {
+            const row = document.createElement('tr');
+            const title = document.createElement('td');
+            title.textContent = item.title;
+            const amount = document.createElement('td');
+            amount.textContent = `₹${item.price}`;
+            row.appendChild(title);
+            row.appendChild(amount);
+            cartTable.appendChild(row);
+
+            totalamount += item.price;
+          });
+          total.textContent = `Total Amount: ₹${totalamount}`;
+        }
+        function submitCart() {
+          alert('Cart submitted successfully!');
+        }
+      </script>
+
+
+  <header>
+    <h1>Add To Cart</h1>
+  </header>
+  <table>
+    <tr align="center">
+        <th>Image</th>
+        <th>Title</th>
+        <th>Price</th>
+        <th>Add to Cart</th>
+    </tr>
+    <tr align="center">
+        <td><img src="1.jpg" width="100" alt="Book1"></td>
+        <td>Web Technologies</td>
+        <td>₹599</td>
+        <td><button onclick="addToCart('Web Technologies', 599)">Click Here</button></td>
+    </tr>
+    <tr align="center">
+        <td><img src="4.jpg" width="100" alt="Book4"></td>
+        <td>Wings Of fire</td>
+        <td>₹233</td>
+        <td><button onclick="addToCart('Wings Of fire', 233)">Click Here</button></td>
+    </tr>
+    <tr align="center">
+        <td><img src="5.jpg" width="100" alt="Book5"></td>
+        <td>Computer Networks</td>
+        <td>₹210</td>
+        <td><button onclick="addToCart('Computer Networks', 210)">Click Here</button></td>
+    </tr>
+    <tr align="center">
+        <td><img src="6.png" width="100" alt="Book6"></td>
+        <td>Operating Systems</td>
+        <td>₹190</td>
+        <td><button onclick="addToCart('Operating Systems', 190)">Click Here</button></td>
+    </tr>
+  </table>
+
+  <div id="cart">
+    <h2>Cart</h2>
+    <ul id="items"></ul>
+    <p id="totalamount">Total Amount: ₹0</p>
+    <button onclick="submitCart()">Submit</button>
+  </div>
+
+  
+</body>
+</html> -->

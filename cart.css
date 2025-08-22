@@ -1,0 +1,53 @@
+body {
+  background-image: url('images/cart.webp');
+  margin: 0;
+  padding: 20px;
+}
+
+header {
+  background-color: #444;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 28px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  background-color: white;
+}
+
+th, td {
+  padding: 12px;
+  border: 1px solid #ddd;
+}
+
+img {
+  border-radius: 5px;
+  height: 80px;
+  width: 70px;
+}
+
+button:hover {
+  background-color: #388e3c;
+}
+
+#cart {
+  margin-top: 30px;
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 5px;
+}
+
+
+#items {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+
+#totalamount {
+  font-weight: bold;
+}
